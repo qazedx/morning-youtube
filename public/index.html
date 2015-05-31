@@ -22,15 +22,14 @@ and open the template in the editor.
         <script>
 
             var youtubeList = [
-                'https://www.youtube.com/watch?v=bzxHt20lcjM&index=66&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I',
-                'https://www.youtube.com/watch?v=byKMYxWfmMM&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I&index=163',
-                'https://www.youtube.com/watch?v=62nOysD794M&index=57&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I',
-                'https://www.youtube.com/watch?v=t6TuwRqwf8M&index=151&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I',
-                'https://www.youtube.com/watch?v=QHG6EWAsBbU&index=83&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I',
-                'https://www.youtube.com/watch?v=9_saI02-v7U&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I&index=169',
-                'https://www.youtube.com/watch?v=_IvA7V8kaLY&index=235&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I',
-                'https://www.youtube.com/watch?v=10xcw0TSShY&index=98&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I',
-                'https://www.youtube.com/watch?v=iaHr444rzf4&index=115&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I'
+                'bzxHt20lcjM',
+                'byKMYxWfmMM',
+                '62nOysD794M',
+                't6TuwRqwf8M',
+                'QHG6EWAsBbU',
+                '_IvA7V8kaLY',
+                '10xcw0TSShY',
+                'iaHr444rzf4'
             ];
             // Returns a random number between min (inclusive) and max (exclusive)
             function getRandomArbitrary(min, max) {
@@ -38,7 +37,9 @@ and open the template in the editor.
             }
             var randShuffle = Math.round(getRandomArbitrary(100, 999), 0);
             var randPos = Math.round(getRandomArbitrary(0, youtubeList.length - 1));
-            var video = youtubeList[randPos] + '&shuffle=' + randShuffle;
+            var yout = 'https://www.youtube.com/watch?v=';
+            var playlist = '&list=PLPd1HuzwfwWTQYTxT_tZVW2in9Mnwln9I';
+            var video = yout + youtubeList[randPos] + playlist + '&shuffle=' + randShuffle;
             console.log(video);
             location.href = video;
 //
